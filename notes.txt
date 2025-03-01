@@ -1,0 +1,11 @@
+
+
+- images
+
+whenever we use 3rd party services to store images we store images first in our server for temperory time and then in service to manage faliur operation
+
+.env generator
+
+
+
+src -
