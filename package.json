@@ -4,8 +4,6 @@
   "description": "backend of youtube",
   "main": "index.js",
   "type": "module",
-  
-
   "scripts": {
     "dev": "nodemon src/index.js"
   },
@@ -15,5 +13,8 @@
     "youtube"
   ],
   "author": "tejas surse",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.5.2"
+  }
 }

@@ -8,4 +8,7 @@ whenever we use 3rd party services to store images we store images first in our 
 
 
 
-src -
+src - making professional backend structre
+
+-- prettier
+00 extension to manage code whenever we do code in collab if some peoples give quoma and other not then it gives very very confilicts 
