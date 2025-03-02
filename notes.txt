@@ -12,3 +12,61 @@ src - making professional backend structre
 
 -- prettier
 00 extension to manage code whenever we do code in collab if some peoples give quoma and other not then it gives very very confilicts 
+
+
+DB - Connection 
+
+// types of db connection professional way  Robust
+
+- # Mongodb
+-- We are going to use online 
+2 ways to db connection
+- all code in index file 
+
+db - folder connection function 
+-- export and import anywhere 
+
+whenever - we talk with db or db related work it can causes error 
+
+1 wrap in try catch
+2 or in promises 
+
+-- Db is always in another continent 
+i.e it requires time - async await is must 
+
+// index.js connection 
+/*
+
+const app = express()
+(async () => {
+    try{
+       await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
+       // this is app.on which is listner 
+       app.on("err", (error)  =>{
+            console.log("ERROR: ", error);
+            throw error
+        })
+
+        app.listen(process.env.PORT, () =>{
+            console.log(`App is Listening at port ${process.env.PORT}`)
+        })
+
+    }catch(err){
+        console.error("ERROR:", error)
+        throw err   
+    }
+})()
+
+*/
+
+IIFE (Immediately Invoked Function Expression)
+The code uses an IIFE, which stands for Immediately Invoked Function Expression. This is a function that is defined and immediately executed. The syntax for an IIFE is as follows:
+(function() {
+    // code here
+})();
+(async () => {
+    // code here
+})();
+
+
+The app.on method is used to set up event listeners in Express. In this case, it listens for an "err" event:
