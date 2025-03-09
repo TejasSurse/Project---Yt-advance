@@ -70,3 +70,34 @@ The code uses an IIFE, which stands for Immediately Invoked Function Expression.
 
 
 The app.on method is used to set up event listeners in Express. In this case, it listens for an "err" event:
+
+
+This is professional way to connect to db
+
+------------------------------------------------------------
+
+video - 9
+
+-- async code alwasy return promise 
+- CORS - Cross origin resource sharing
+
+-- npm i cookie-parser and npm i cors 
+
+-- app.use for middleware and configuration 
+todo read cors docs in npmjs.com
+
+actually each api have err, req, res , next
+req - request object
+res - response object
+next - next function
+
+-- wrapper in utility 
+
+* what are higher order functions
+- function which accept function as a parameter or aslo return function as a result
+
+// read utils folder
+// read - nodejs api error 
+
+// homeworkd - rework on js fundamentals -
+// homework = read about this.data 
