@@ -7,14 +7,21 @@ const asyncHandler = (requestHandler ) => {
 export { asyncHandler}
 
 
-
+/*
 
 // our methong 
 // 1 const asyncHandler = () => {}
 // 2 const asyncHandler = ( fn ) => { () => {} }
     // in this case we are passing function as a parameter
-    
+
 // ~ to 2 = const asyncHandler = ( fn ) => () => {} // just not curly braces
+/*
+    const asyncHandler = ( fn ) => {
+    async ( req, res, next ) => {
+        }    
+    }
+
+/*
 
 
 // ```````` THIS IS TRY CATCH VALA SYNTAX ~~~~~~~~~~~~~~~~~~~~
@@ -30,3 +37,5 @@ export { asyncHandler}
 //         })
 //     }
 // }
+
+*/

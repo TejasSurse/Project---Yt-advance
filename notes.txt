@@ -101,3 +101,32 @@ next - next function
 
 // homeworkd - rework on js fundamentals -
 // homework = read about this.data 
+
+video - 9 is very deep
+`````````````````````````````````````````````````````````````````
+video - 10
+
+created models 
+
+-- use package - mongoose-aggregate-paginate-v2
+why - power of Mongodb
+-- it is itself is course 
+
+--now we are going to study bcrypt and bcryptjs
+
+read docs both are different 
+= helps you to hash password
+
+tocken
+
+jwt - json web token
+- for maing tocken 
+
+
+-- jwt - is a bearer token 
+- the person who bear token is the able to access the resource
+
+
+// sessional and cookie are two different things
+// sessional is stored in server and cookie is stored in user browser
+// both are used for authentication
