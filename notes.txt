@@ -130,3 +130,38 @@ jwt - json web token
 // sessional and cookie are two different things
 // sessional is stored in server and cookie is stored in user browser
 // both are used for authentication
+------------------------------------------------------------
+
+video - 11
+// advanced topics- aggrigation pipeline 
+jwt bcrypt ...
+
+Upload file in Backend | Multer
+
+-- file handling - recommended on different server (THRID PARTY)
+-- We are using production grade server for file handling
+
+this is most general way to handle file upload for all is same aws, google, microsoft
+
+-- best - cloudinary big companies 
+
+cloudinary - cloudinary is a cloud-based service that allows you to store, manage, and transform your images.
+
+we have two - 
+- express file upload
+- Multer
+
+we are using Multer
+``````````````````
+
+multer ke through hi file upload hoti he
+
+there are tow ways to upload file
+1. we get file store in server for temp time then upload to cloudinary
+2. we get file directly from client and upload to cloudinary
+ 
+now till 11th video we just setup project _ Production grade
+
+backend engineers have to thing all the corner cases and edge cases
+hence they get salary 
+
