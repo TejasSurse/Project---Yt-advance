@@ -257,5 +257,30 @@ logic building - big problem - make small problems - solve small problems
 
 ----------------------------------------------------------
 video - 14
+------------------------------------------------------------------
 
+
+V 16
+
+Refresh token and access token me antar kya he ?
+
+
+it is modern practice 
+
+both are same complete 
+
+1 is short live  - accessToken 
+2 long live  - refresh token
+
+
+accessToken - for authentication - if loogedin
+- validate 
+refreshToken - accessToken expire in some short time 
+
+but user dont want io insert password again and again so we store refreshToken  in DB and user ke pass so we build api endpoint if ref token and in db and user same we give them access
+
+( thsi is professional practie only );
+
+
+36 min
 
