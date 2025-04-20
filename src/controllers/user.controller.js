@@ -39,7 +39,13 @@ const registerUser = asyncHandler(async (req, res) => {
     // check images and handle images 
     // multer gives us req.files
     const avatarLocalPath = req.files?.avatar[0]?.path;
-    const coverImageLocalPath = req.files?.coverImage[0]?.path;
+    // const coverImageLocalPath = req.files?.coverImage[0]?.path;
+    
+    let coverImageLocalPath;
+    // files ayi? array aya ? (isArray), lenght > 0 (properties he kya nahi usme )
+    if(req.files && Array.isArray(req.files.coverImage) && req.files.coverImage.lenght > 0){
+        coverImageLocalPath = req.files.coverImage[0].path; 
+    }
 
     if(!avatarLocalPath){
         throw new ApiError(400, "Avatar is required")
@@ -48,7 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
     // upload to cloudinary
     const avatar =  await uploadOnCloudinary(avatarLocalPath);
     const coverImage =  await uploadOnCloudinary(coverImageLocalPath);
-
+    
     if(!avatar){
         throw new ApiError(400, "Avatar is required")
     }
@@ -61,10 +67,9 @@ const registerUser = asyncHandler(async (req, res) => {
         password,
         username : username.toLowerCase()
     })
-    
-    const createdUser = await user.findById(user._id).select("-password -refreshToken"
-        // kya kya nahi chahiye
-    );
+    // kya kya nahi chahiye
+    const createdUser = await User.findById(user._id).select("-password -refreshToken");
+
 
     if(!createdUser){
         throw new ApiError(500, "Something went wrong While regestering user")
@@ -72,6 +77,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
     // send response ( structured data)
     return res.status(201).json(new ApiResponse(200, createdUser, "User Registered successfully"));
+
 });
 
 

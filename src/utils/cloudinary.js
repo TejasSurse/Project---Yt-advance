@@ -19,6 +19,7 @@ import fs from 'fs';
 });
 
 
+
 const uploadOnCloudinary = async (localFilePath) => {
     try {
         if(!localFilePath) return null;
@@ -26,7 +27,7 @@ const uploadOnCloudinary = async (localFilePath) => {
        let response =  await cloudinary.uploader.upload(localFilePath, {
             resource_type: 'auto',
         }        )
-        console.log("file is uploaded to cloudinary", response.url);
+        //console.log("file is uploaded to cloudinary", response.url);
         return response;
 
     } catch (error) {
