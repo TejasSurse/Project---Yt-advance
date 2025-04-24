@@ -2,6 +2,7 @@ import {asyncHandler} from "../utils/asyncHandler.js";
 import {ApiError} from "../utils/ApiError.js";
 import jwt from "jsonwebtoken";
 import {User} from "../models/user.model.js";
+
 export const verifyJWT = asyncHandler(async(req, res, next)=>{
     // read jwt docs 
     // tocken nikalo ya to cookies se ya to header se 
@@ -12,14 +13,14 @@ export const verifyJWT = asyncHandler(async(req, res, next)=>{
         throw new ApiError(401, "Unauthorized Request");
     }
  
-    const decodeTocken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    const decodeToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     
-    await User.findById(decodedToken?._id).select("-password -refreshToken");
+    await User.findById(decodeToken?._id).select("-password -refreshToken");
     if(!user){
         // Todo next video
         throw new ApiError(401, "Invalid Access Token");
     }
-    req.user = user;
+    req.user = User;
     next();
     } catch(error){
         throw new ApiError(401, error?.message || "Invalid Access")
